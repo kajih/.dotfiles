@@ -15,6 +15,16 @@ mkdir -p ~/bin
 # -PROFILE
 [[ -f ~/.profile ]] && rm ~/.profile
 
+# - p10k
+[[ -f ~/.p10k.zsh ]] && rm ~/.p10k.zsh
+
+if [[ -h ~/.config ]] ; then 
+  echo ".config is symlinked... Exiting!"
+  exit 0
+fi
+
+[[ ! -d ~/.config ]] && mkdir ~/.config
+
 stow -t ~/ -S config
 ln -s $(pwd)/config/.tmux/.tmux.conf ~/
 
