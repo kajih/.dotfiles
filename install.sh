@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo ./prereq.sh
-sudo ./fonts.sh
-./setup.sh
+source ./prereq.sh
+source ./fonts.sh
+source ./setup.sh
 
