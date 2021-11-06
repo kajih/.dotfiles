@@ -1,0 +1,25 @@
+<mtTheme>
+  <id>DBMetallic</id>
+  <editorColorsScheme>DBMetallic</editorColorsScheme>
+  <dark>true</dark>
+  <name>DarkBlue</name>
+  <colors>
+    <color id="background" value="101010ff"/>
+    <color id="foreground" value="b0bec5ff"/>
+    <color id="text" value="969696ff"/>
+    <color id="highlight" value="6464a0ff"/>
+    <color id="selectionBackground" value="202020ff"/>
+    <color id="selectionForeground" value="ffffffff"/>
+    <color id="button" value="505096ff"/>
+    <color id="secondaryBackground" value="101010ff"/>
+    <color id="disabled" value="828282ff"/>
+    <color id="contrast" value="3c3c64ff"/>
+    <color id="tableSelected" value="314549ff"/>
+    <color id="secondBorder" value="2a373eff"/>
+    <color id="treeSelection" value="6e73b250"/>
+    <color id="notifications" value="323232ff"/>
+    <color id="accent" value="009688ff"/>
+    <color id="excluded" value="2e3c43ff"/>
+  </colors>
+  <themeId>DBMetallic</themeId>
+</mtTheme>

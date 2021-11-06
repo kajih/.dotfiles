@@ -1,0 +1,9 @@
+[submodule "config/.config/nvim"]
+	path = config/.config/nvim
+	url = https://github.com/kajih/nvim
+[submodule "config/.tmux"]
+	path = config/.tmux
+	url = https://github.com/gpakosz/.tmux
+[submodule "config/.zgen"]
+	path = config/.zgen
+	url = https://github.com/tarjoilija/zgen.git

@@ -1,0 +1,12 @@
+alias aaa='figlet -w 120 Arrange, Act, Assert'
+alias aptlog='tail -n 30 /var/log/apt/history.log'
+alias cat='bat'
+alias dc='docker-compose'
+alias free='free -h'
+alias pdd='dirs -v'
+alias pd='pd=pushd'
+alias peaclock='peaclock --config-dir ~/.config/peaclock'
+alias pwdc='pwd | xclip'
+alias vim=nvim
+alias vimsync='nvim +PaqSync +qall'
+alias vimu='nvim -u NONE'
