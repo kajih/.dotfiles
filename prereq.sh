@@ -21,7 +21,7 @@ add-apt-repository -y -u ppa:longsleep/golang-backports
 apt install -y stow git build-essential nodejs alacritty neovim golang-go zsh \
 	fonts-firacode tmux neofetch ssh python3-pip exuberant-ctags
 
-python3 -m pip install --upgrade pynvim
+python3 -m pip install --upgrade pynvim neovim-remote
 npm install -g neovim
 npm install -g yarn
 
