@@ -213,6 +213,7 @@ for_window [class="jetbrains-idea" title="win0"] floating enable;
 
 #exec --no-startup-id compton
 #exec --no-startup-id flashfocus
+exec --no-startup-id nm-applet
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id xautolock -time 8 -locker "i3lock-fancy -g -p"
 exec --no-startup-id dunst
