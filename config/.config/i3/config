@@ -169,6 +169,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # bindsym Scroll_Lock exec --no-startup-id i3lock-fancy
 bindsym Scroll_Lock exec xautolock -locknow
+bindsym $mod+o exec xautolock -locknow
 
 bindsym $mod+p exec pavucontrol-qt
 
