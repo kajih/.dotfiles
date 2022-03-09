@@ -26,6 +26,8 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/vi-mode
     zgen load chrissicool/zsh-256color
     zgen load zsh-users/zsh-syntax-highlighting
+    zgen load zsh-users/zsh-autosuggestions
+    zgen load zsh-vi-more/evil-registers
     zgen load romkatv/powerlevel10k powerlevel10k
 
     # theme
