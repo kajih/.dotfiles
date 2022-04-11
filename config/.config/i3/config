@@ -209,6 +209,7 @@ bar {
 # Custom Startup
 
 for_window [class="jetbrains-idea" title="win0"] floating enable;
+for_window [class="jetbrains-idea" id=0x2200007] floating enable;
 
 #exec --no-startup-id compton
 #exec --no-startup-id flashfocus
