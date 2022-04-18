@@ -41,6 +41,11 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+if [[ -d $HOME/.local/share/pnpm ]]; then
+  export PNPM_HOME="$HOME/.local/share/pnpm"
+  export PATH="$PNPM_HOME:$PATH"
+fi
+
 # Kickstart zoxide
 [[ $(command -v zoxide) ]] && eval "$(zoxide init zsh)"
 
@@ -50,4 +55,5 @@ compinit
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
-
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
