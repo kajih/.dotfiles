@@ -64,8 +64,13 @@ arguments = "--rebase --autostash"
 [commands]
 #"Python Environment" = "~/dev/.env/bin/pip install -i https://pypi.python.org/simple -U --upgrade-strategy eager jupyter"
 neobuild = "cd ~/src/cpp/github/neovim && make -j8 CMAKE_BUILD_TYPE=RelWithDebInfo && sudo make install"
-rust-analyzer = "cd ~/src/rust/github/rust-analyzer && cargo xtask install"
-pwd = "cd"
+rust-analyzer = """
+  cd ~/src/rust/github/rust-analyzer &&
+  cargo xtask install &&
+  rm ~/.local/share/nvim/lsp_servers/rust/rust-analyzer &&
+  ln -s ~/.cargo/bin/rust-analyzer ~/.local/share/nvim/lsp_servers/rust/rust-analyzer
+"""
+homedir = "cd"
 
 [brew]
 #greedy_cask = true
