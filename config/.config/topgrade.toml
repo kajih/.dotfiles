@@ -18,7 +18,7 @@ no_retry = true
 run_in_tmux = true
 
 # List of remote machines with Topgrade installed on them
-remote_topgrades = ["update@naglfar.lan"]
+remote_topgrades = ["update@naglfar.lan", "kajih@bastard.lan", "update@kajih.xyz"]
 
 # Arguments to pass SSH when upgrading remote systems
 ssh_arguments = "-o ConnectTimeout=2"
@@ -27,7 +27,7 @@ ssh_arguments = "-o ConnectTimeout=2"
 #remote_topgrade_path = ".cargo/bin/topgrade"
 
 # Arguments to pass tmux when pulling Repositories
-tmux_arguments = "-S /var/tmux.sock"
+# tmux_arguments = "-S /var/tmux.sock"
 
 # Do not set the terminal title
 set_title = false
