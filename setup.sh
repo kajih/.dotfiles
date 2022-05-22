@@ -15,9 +15,6 @@ mkdir -p ~/bin
 # -PROFILE
 [[ -f ~/.profile ]] && rm ~/.profile
 
-# - p10k
-[[ -f ~/.p10k.zsh ]] && rm ~/.p10k.zsh
-
 if [[ -h ~/.config ]] ; then 
   echo ".config is symlinked... Exiting!"
   exit 0
