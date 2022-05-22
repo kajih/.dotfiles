@@ -2,21 +2,9 @@
 source ~/.aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
 
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block, everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-if [[ -d $HOME/.local/share/pnpm ]] ; then
-  export PNPM_HOME="$HOME/.local/share/pnpm"
-  export PATH="$PNPM_HOME:$PATH"
-fi
-
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=5000
+HISTSIZE=100000
+SAVEHIST=500000
 setopt autocd extendedglob notify
 bindkey -v
 source "${HOME}/.zgen/zgen.zsh"
@@ -32,8 +20,6 @@ if ! zgen saved; then
     zgen load chrissicool/zsh-256color
     zgen load zsh-users/zsh-syntax-highlighting
     zgen load zsh-users/zsh-autosuggestions
-    zgen load zsh-vi-more/evil-registers
-    zgen load romkatv/powerlevel10k powerlevel10k
 
     # theme
     zgen oh-my-zsh themes/arrow
@@ -43,10 +29,16 @@ if ! zgen saved; then
 fi
 
 # The following lines were added by compinstall
-zstyle :compinstall filename '~/.zshrc'
+# zstyle :compinstall filename '~/.zshrc'
 autoload -Uz compinit
 compinit
-# End of lines added by compinstall
+
+if [[ -d $HOME/.local/share/pnpm ]]; then
+  export PNPM_HOME="$HOME/.local/share/pnpm"
+  export PATH="$PNPM_HOME:$PATH"
+fi
+
+eval "$(starship init zsh)"
 
 # Kickstart zoxide
 [[ $(command -v zoxide) ]] && eval "$(zoxide init zsh)"
@@ -54,6 +46,5 @@ compinit
 # Machine specific zshrc
 [[ -f $HOME/.zshrc.local ]] && source "$HOME/.zshrc.local"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
-
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
