@@ -92,7 +92,7 @@ show_arch_news = true
 
 [windows]
 # Manually select Windows updates
-accept_all_updates = false
+accept_all_updates = true
 open_remotes_in_new_terminal = true
 
 # Causes Topgrade to rename itself during the run to allow package managers
@@ -110,4 +110,4 @@ upgrade = false
 
 [flatpak]
 # Use sudo for updating the system-wide installation
-#use_sudo = true
+use_sudo = true
