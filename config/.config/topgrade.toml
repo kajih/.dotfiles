@@ -71,7 +71,6 @@ rust-analyzer = """
   ln -s ~/.cargo/bin/rust-analyzer ~/.local/share/nvim/lsp_servers/rust/rust-analyzer
 """
 homedir = "cd"
-nvim-packer = "nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'"
 
 [brew]
 #greedy_cask = true
