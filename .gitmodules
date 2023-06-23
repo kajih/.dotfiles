@@ -1,6 +1,6 @@
 [submodule "config/.config/nvim"]
 	path = config/.config/nvim
-	url = https://github.com/kajih/nvim
+	url = git@github.com:kajih/nvim.git
 [submodule "config/.zgen"]
 	path = config/.zgen
 	url = https://github.com/tarjoilija/zgen.git
