@@ -1,0 +1,37 @@
+(defcfg
+  log-layer-changes no
+  danger-enable-cmd yes
+  ;; linux-dev /dev/input/by-id/usb-OBINS_HEXCORE_ANNEPRO2_ISO_024319480260704718490428086803D1-event-kbd
+)
+
+(defalias
+  ;; macro-release-cancel to output different characters with visual feedback
+  ;; after holding for different amounts of time.
+  alt (layer-while-held alt)
+  xol (macro-release-cancel x 500 o l a r i s)
+)
+
+(defsrc
+  esc    1    2    3    4    5    6    7    8    9    0    -    =  bspc
+  tab    q    w    e    r    t    y    u    i    o    p    [    ]  ret
+  caps   a    s    d    f    g    h    j    k    l   scln  ' bksl
+  lsft   lsgt    z    x    c    v    b    n    m    ,    .   /  rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+)
+
+(deflayer main
+  esc    1    2    3    4    5    6    7    8    9    0    -    =  bspc
+  tab    q    w    e    r    t    y    u    i    o    p    [    ]  ret
+  @alt   a    s    d    f    g    h    j    k    l   scln ' bksl
+  lsft   lsgt    z    x    c    v    b    n    m    ,    .   /  rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+)
+
+(deflayer alt
+  esc    1    2    3    4    5    6    7    8    9    0    -    =  bspc
+  tab    q    w    e    r    t    y    u    i    o    p    home end ret
+  _      a    s    d    f    g    left down up rght pgup pgdn bksl
+  lsft   lsgt    z    @xol    c    v    b    n    m    ,    .   del  rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+)
+

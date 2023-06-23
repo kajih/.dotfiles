@@ -1,0 +1,5 @@
+export MAVEN_OPTS="-Xms257m -Xmx512m -Xss10m"
+source ~/.local/py311/bin/activate
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
