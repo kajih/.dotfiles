@@ -12,3 +12,4 @@ alias pwdc='pwd | xclip'
 alias vim=nvim
 alias vimsync='nvim +PaqSync +qall'
 alias vimu='nvim -u NONE'
+alias gctags='ctags --recurse=yes --exclude=.git --exclude=BUILD --exclude=.svn --exclude=vendor/* --exclude=node_modules/* --exclude=db/* --exclude=log/*'
