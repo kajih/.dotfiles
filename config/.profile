@@ -13,7 +13,6 @@ export LANG=en_GB.UTF-8
 export LANGUAGE=en
 export EDITOR=nvim
 export TERM=xterm-256color
-export TERMINAL=xterm-256color
 export KEYTIMEOUT=1 # ZSH VI Mode
 
 if command -v wsl.exe &> /dev/null; then
