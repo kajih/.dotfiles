@@ -31,7 +31,7 @@ ssh_arguments = "-o ConnectTimeout=2"
 remote_topgrade_path = ".cargo/bin/topgrade"
 
 # Arguments to pass tmux when pulling Repositories
-tmux_arguments = "-S /tmp/tmux-1000/default"
+#tmux_arguments = "-S /tmp/tmux-1000/default"
 
 # Do not set the terminal title
 set_title = true
