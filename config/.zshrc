@@ -53,6 +53,8 @@ fi
 # Fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+[[ -d /opt/avr-gcc ]] && export PATH=/opt/avr-gcc/bin:$PATH
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 [[ -d $HOME.sdkman ]] && export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
