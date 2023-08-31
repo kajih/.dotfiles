@@ -15,7 +15,8 @@ set $term alacritty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+# set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu exec wofi --show=drun 
 
 include /etc/sway/config-vars.d/*
 
@@ -219,7 +220,7 @@ bar {
     # }
 }
 
-# exec --no-startup-id nm-applet
+exec --no-startup-id nm-applet
 exec --no-startup-id dunst
 exec --no-startup-id wayvnc --keyboard=se-nodeadkeys
 
