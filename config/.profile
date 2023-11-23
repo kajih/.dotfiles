@@ -55,8 +55,8 @@ if [ -d "/usr/local/go" ] ; then
   PATH="$PATH:/usr/local/go/bin"
 fi
 
-if [ -d "$HOME/.local/share/eclipse" ] ; then
-  PATH="$PATH:$HOME/.local/share/eclipse"
+if [ -d "$HOME/.local/eclipse" ] ; then
+  PATH="$PATH:$HOME/.local/eclipse"
 fi
 
 # set PATH so it includes user's private go if it exists
