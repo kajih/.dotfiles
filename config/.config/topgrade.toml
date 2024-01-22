@@ -56,7 +56,7 @@ repos = [
 pull_predefined = true
 
 # Arguments to pass Git when pulling Repositories
-pull_arguments = "--rebase --autostash"
+# pull_arguments = "--rebase --autostash"
 # push_arguments = "--all"
 
 [composer]
