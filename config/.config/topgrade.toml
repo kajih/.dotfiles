@@ -22,7 +22,7 @@ pre_sudo = true
 run_in_tmux = true
 
 # List of remote machines with Topgrade installed on them
-remote_topgrades = ["kajih@naglfar.lan", "kajih@bastard.lan", "kajih@kajih.xyz", "kajih@gungnir.lan"]
+remote_topgrades = ["kajih@naglfar.lan", "kajih@bastard.lan", "kajih@drp01.kajih.xyz", "kajih@gungnir.lan"]
 
 # Arguments to pass SSH when upgrading remote systems
 ssh_arguments = "-o ConnectTimeout=2"
