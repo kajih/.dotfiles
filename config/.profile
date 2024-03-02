@@ -8,10 +8,13 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
+#Use en_GB because date/time is better
 export LC_ALL=en_GB.UTF-8
 export LANG=en_GB.UTF-8
 export LANGUAGE=en
+
 export EDITOR=nvim
+
 export TERM=xterm-256color
 export KEYTIMEOUT=1 # ZSH VI Mode
 
@@ -47,6 +50,7 @@ if [ -f "$HOME/.aliases" ] ; then
   source $HOME/.aliases
 fi
 
+# Aliases not shared on git
 if [ -f "$HOME/.aliases.local" ] ; then
   source $HOME/.aliases.local
 fi
@@ -62,8 +66,8 @@ fi
 # set PATH so it includes user's private go if it exists
 if [ -d "$HOME/go" ] ; then
   GOPATH="$HOME/go"
-  GOBIN="$GOME/go/bin"
-  PATH="$PATH:$GOPATH/bin"
+  GOBIN="$HOME/go/bin"
+  PATH="$PATH:$GOBIN"
 fi
 
 [[ -s "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
