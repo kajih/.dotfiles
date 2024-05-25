@@ -19,18 +19,18 @@ apt install -y git build-essential nodejs curl stow unzip zsh python3-pip \
 # not updated
 # add-apt-repository -y -n ppa:mmstick76/alacritty
 # add-apt-repository -y -u ppa:longsleep/golang-backports
-add-apt-repository -y -n ppa:aslatter/ppa
-add-apt-repository -y -n ppa:neovim-ppa/unstable
+# add-apt-repository -y -n ppa:aslatter/ppa
+# add-apt-repository -y -n ppa:neovim-ppa/unstable
 
 # Split so if one fails, the others can continue, and easy to update
 apt update
-apt install -y alacritty 
-apt install -y neovim
-apt install -y golang-go
+# apt install -y alacritty 
+# apt install -y neovim
+# apt install -y golang-go
 	
 python3 -m pip install --upgrade pynvim neovim-remote
-npm install -g neovim
-npm install -g yarn
+# npm install -g neovim
+# npm install -g yarn
 
-snap install starship
+# snap install starship
 
