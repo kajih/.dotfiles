@@ -1,3 +1,6 @@
 tags
 config/.config/tmux/plugins
+!config/.config/tmux/plugins/tpm
+config/.config/vnc/*.log
+config/.config/vnc/passwd
 
