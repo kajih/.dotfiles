@@ -14,7 +14,7 @@ apt autoremove
 curl -sL https://deb.nodesource.com/setup_current.x | sudo -E bash -
 
 apt install -y git build-essential nodejs curl stow unzip zsh python3-pip \
-	fonts-firacode tmux ssh python3-pip exuberant-ctags snapd
+	fonts-firacode tmux ssh python3-pip exuberant-ctags entr
 
 # not updated
 # add-apt-repository -y -n ppa:mmstick76/alacritty
