@@ -25,7 +25,6 @@ fi
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
-  # include .bashrc if it exists
   if [ -f "$HOME/.bashrc" ]; then
     . "$HOME/.bashrc"
   fi
@@ -71,6 +70,7 @@ if [ -d "$HOME/go" ] ; then
 fi
 
 [[ -s "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
+[[ -d "$HOME/.local/py3env" ]] && source "$HOME/.local/py3env/bin/activate" 
 [[ -d "$HOME/.rvm" ]] && export PATH="$PATH:$HOME/.rvm/bin"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
