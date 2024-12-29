@@ -69,6 +69,11 @@ if [ -d "$HOME/go" ] ; then
   PATH="$PATH:$GOBIN"
 fi
 
+# set PATH so it includes user's private go if it exists
+if [ -d "/opt/zig" ] ; then
+  PATH="$PATH:/opt/zig"
+fi
+
 [[ -s "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
 [[ -d "$HOME/.local/py3env" ]] && source "$HOME/.local/py3env/bin/activate" 
 [[ -d "$HOME/.rvm" ]] && export PATH="$PATH:$HOME/.rvm/bin"
