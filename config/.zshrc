@@ -55,11 +55,13 @@ fi
 
 [[ -d /opt/avr-gcc ]] && export PATH=/opt/avr-gcc/bin:$PATH
 
+# bun completions
+[[ -s "/home/kajih/.bun/_bun" ]] && source "/home/kajih/.bun/_bun"
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 [[ -d $HOME.sdkman ]] && export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 [[ -d $HOME/.rvm ]] && export PATH="$PATH:$HOME/.rvm/bin"
-
 

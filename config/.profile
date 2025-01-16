@@ -69,6 +69,13 @@ if [ -d "$HOME/go" ] ; then
   PATH="$PATH:$GOBIN"
 fi
 
+# bun completions
+if [ -d "$HOME/.bun" ] ; then
+  # bun
+  export BUN_INSTALL="$HOME/.bun"
+  export PATH="$BUN_INSTALL/bin:$PATH"
+fi
+
 # set PATH so it includes user's private go if it exists
 if [ -d "/opt/zig" ] ; then
   PATH="$PATH:/opt/zig"
