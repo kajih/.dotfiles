@@ -13,7 +13,7 @@ apt autoremove
 
 curl -sL https://deb.nodesource.com/setup_current.x | sudo -E bash -
 
-apt install -y git build-essential nodejs curl stow unzip zsh python3-pip \
+apt install -y git build-essential curl stow unzip zsh python3-pip \
 	fonts-firacode tmux ssh python3-pip exuberant-ctags entr
 
 # not updated
@@ -29,8 +29,10 @@ apt update
 # apt install -y golang-go
 	
 python3 -m pip install --upgrade pynvim neovim-remote
+
+# npm install -g npm-check-updates
 # npm install -g neovim
 # npm install -g yarn
-
+#
 # snap install starship
 
