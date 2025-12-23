@@ -7,7 +7,7 @@ fi
 
 apt update
 # curl -L https://download.jetbrains.com/fonts/JetBrainsMono-2.001.zip -o /tmp/monofont.zip
-curl -L https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip -o /tmp/monofont.zip
+curl -L https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip -o /tmp/monofont.zip
 
 apt install -y fonts-noto-color-emoji unifont
 dpkg-reconfigure fontconfig-config
