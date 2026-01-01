@@ -82,6 +82,7 @@ if [ -d "/opt/zig" ] ; then
 fi
 
 [[ -s "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
+[[ -s "$HOME/.local/bin/env" ]] && source "$HOME/.local/bin/env"
 [[ -d "$HOME/.local/py3env" ]] && source "$HOME/.local/py3env/bin/activate" 
 [[ -d "$HOME/.rvm" ]] && export PATH="$PATH:$HOME/.rvm/bin"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
