@@ -29,7 +29,7 @@ disable = ["containers", "jetbrains_toolbox"]
 # ignore_failures = ["powershell"]
 
 # List of remote machines with Topgrade installed on them
-remote_topgrades = ["kajih@gungnir.lan", "kajih@mimiru3.lan", "kajih@bastard.lan"]
+# remote_topgrades = ["kajih@gungnir.lan", "kajih@mimiru3.lan", "kajih@bastard.lan"]
 
 # Path to Topgrade executable on remote machines
 # remote_topgrade_path = ".cargo/bin/topgrade"
