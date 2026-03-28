@@ -44,7 +44,7 @@ disable = ["containers", "jetbrains_toolbox"]
 # set_title = true
 
 # Display the time in step titles (default: true)
-# display_time = true
+display_time = true
 
 # Don't ask for confirmations (no default value)
 assume_yes = true
