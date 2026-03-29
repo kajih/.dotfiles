@@ -31,45 +31,34 @@ fi
 autoload -Uz compinit
 compinit
 
-if [[ -d $HOME/.local/share/pnpm ]]; then
+if [[ -d $HOME/.local/share/pnpm ]] ; then
   export PNPM_HOME="$HOME/.local/share/pnpm"
   export PATH="$PNPM_HOME:$PATH"
 fi
 
-if [[ -d $HOME/.wasmtime ]]; then
+if [[ -d $HOME/.wasmtime ]] ; then
   export WASMTIME_HOME="$HOME/.wasmtime"
   export PATH="$WASMTIME_HOME/bin:$PATH"
 fi
 
-# Initialize starship prompt
-[[ $(command -v starship) ]] && eval "$(starship init zsh)"
+if [[ -s $HOME/.atuin/bin/env ]]; then
+  source $HOME/.atuin/bin/env
+  eval "$(atuin init zsh)"
+fi
 
-# Kickstart zoxide
+[[ $(command -v starship) ]] && eval "$(starship init zsh)"
 [[ $(command -v zoxide) ]] && eval "$(zoxide init zsh)"
 
 # Machine specific zshrc
 [[ -f $HOME/.zshrc.local ]] && source "$HOME/.zshrc.local"
 
-# Fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
 [[ -d /opt/avr-gcc ]] && export PATH=/opt/avr-gcc/bin:$PATH
 
 # bun completions
 [[ -s "/home/kajih/.bun/_bun" ]] && source "/home/kajih/.bun/_bun"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[[ -s "$NVM_DIR/bash_completion" ]] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-[[ -d $HOME.sdkman ]] && export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-[[ -d $HOME/.rvm ]] && export PATH="$PATH:$HOME/.rvm/bin"
-
-
-. "$HOME/.local/bin/env"
 
 

@@ -24,8 +24,8 @@ if command -v wsl.exe &> /dev/null; then
 fi
 
 # if running bash
-if [ -n "$BASH_VERSION" ]; then
-  if [ -f "$HOME/.bashrc" ]; then
+if [ -n "$BASH_VERSION" ] ; then
+  if [ -f "$HOME/.bashrc" ] ; then
     . "$HOME/.bashrc"
   fi
 fi
@@ -76,14 +76,19 @@ if [ -d "$HOME/.bun" ] ; then
   export PATH="$BUN_INSTALL/bin:$PATH"
 fi
 
-# set PATH so it includes user's private go if it exists
-if [ -d "/opt/zig" ] ; then
-  PATH="$PATH:/opt/zig"
-fi
-
 [[ -s "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
 [[ -s "$HOME/.local/bin/env" ]] && source "$HOME/.local/bin/env"
-[[ -d "$HOME/.local/py3env" ]] && source "$HOME/.local/py3env/bin/activate" 
-[[ -d "$HOME/.rvm" ]] && export PATH="$PATH:$HOME/.rvm/bin"
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+[[ -d "$HOME/.venv" ]] && source "$HOME/.venv/bin/activate" 
+[[ -f "$HOME/.fzf.zsh" ]] && source "$HOME/.fzf.zsh"
+
+if [[ -d "$HOME/.rvm" ]] ; then 
+  export PATH="$PATH:$HOME/.rvm/bin"
+  source "$HOME/.rvm/scripts/rvm"
+fi
+
+if [[ -d "$HOME/.nvm" ]] ; then
+  export NVM_DIR="$HOME/.nvm"
+  source $NVM_DIR/nvm.sh  # This loads nvm
+fi
+
 
