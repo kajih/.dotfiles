@@ -18,9 +18,16 @@ export EDITOR=nvim
 export TERM=xterm-256color
 export KEYTIMEOUT=1 # ZSH VI Mode
 
-if command -v wsl.exe &> /dev/null; then
-  export WSL_VERSION=$(wsl.exe -l -v | grep -a '[*]' | sed 's/[^0-9]*//g')
-  export WSL_HOST=$(tail -1 /etc/resolv.conf | cut -d' ' -f2)
+# if command -v wsl.exe >/dev/null 2>&1; then
+#   export WSL_VERSION=$(wsl.exe -l -v | grep -a '[*]' | sed 's/[^0-9]*//g')
+#   export WSL_HOST=$(tail -1 /etc/resolv.conf | cut -d' ' -f2)
+# fi
+
+if command -v wsl.exe >/dev/null 2>&1; then
+  WSL_VERSION=$(wsl.exe -l -v 2>/dev/null | awk '/\*/ {print $NF; exit}')
+  WSL_HOST=$(awk '/^nameserver / {ip=$2} END {print ip}' /etc/resolv.conf)
+  export WSL_VERSION
+  export WSL_HOST
 fi
 
 # if running bash
@@ -46,12 +53,12 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 if [ -f "$HOME/.aliases" ] ; then
-  source $HOME/.aliases
+  . $HOME/.aliases
 fi
 
 # Aliases not shared on git
 if [ -f "$HOME/.aliases.local" ] ; then
-  source $HOME/.aliases.local
+  . $HOME/.aliases.local
 fi
 
 if [ -d "/usr/local/go" ] ; then
@@ -76,19 +83,17 @@ if [ -d "$HOME/.bun" ] ; then
   export PATH="$BUN_INSTALL/bin:$PATH"
 fi
 
-[[ -s "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
-[[ -s "$HOME/.local/bin/env" ]] && source "$HOME/.local/bin/env"
-[[ -d "$HOME/.venv" ]] && source "$HOME/.venv/bin/activate" 
-[[ -f "$HOME/.fzf.zsh" ]] && source "$HOME/.fzf.zsh"
+[ -s "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
+[ -s "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
+[ -d "$HOME/.venv" ] && . "$HOME/.venv/bin/activate" 
 
-if [[ -d "$HOME/.rvm" ]] ; then 
+if [ -d "$HOME/.rvm" ] ; then 
   export PATH="$PATH:$HOME/.rvm/bin"
-  source "$HOME/.rvm/scripts/rvm"
+  . "$HOME/.rvm/scripts/rvm"
 fi
 
-if [[ -d "$HOME/.nvm" ]] ; then
+if [ -d "$HOME/.nvm" ] ; then
   export NVM_DIR="$HOME/.nvm"
-  source $NVM_DIR/nvm.sh  # This loads nvm
+  . $NVM_DIR/nvm.sh  # This loads nvm
 fi
-
 

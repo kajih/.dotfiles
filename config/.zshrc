@@ -48,6 +48,7 @@ fi
 
 [[ $(command -v starship) ]] && eval "$(starship init zsh)"
 [[ $(command -v zoxide) ]] && eval "$(zoxide init zsh)"
+[[ -f "$HOME/.fzf.zsh" ]] && source "$HOME/.fzf.zsh"
 
 # Machine specific zshrc
 [[ -f $HOME/.zshrc.local ]] && source "$HOME/.zshrc.local"
