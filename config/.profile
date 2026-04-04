@@ -24,7 +24,7 @@ export KEYTIMEOUT=1 # ZSH VI Mode
 # fi
 
 if command -v wsl.exe >/dev/null 2>&1; then
-  WSL_VERSION=$(wsl.exe -l -v 2>/dev/null | awk '/\*/ {print $NF; exit}')
+  WSL_VERSION=$(uname -r | grep -qi microsoft && echo 2 || echo 1)
   WSL_HOST=$(awk '/^nameserver / {ip=$2} END {print ip}' /etc/resolv.conf)
   export WSL_VERSION
   export WSL_HOST
