@@ -2,9 +2,10 @@ binds {
     // === System & Overview ===
     Mod+D repeat=false { toggle-overview; }
     Mod+Tab repeat=false { toggle-overview; }
-    Mod+Shift+Slash { show-hotkey-overlay; }
+    Mod+Shift+less { show-hotkey-overlay; }
 
     // === Application Launchers ===
+    Mod+Return hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
     Mod+T hotkey-overlay-title="Open Terminal" { spawn "alacritty"; }
     Mod+Shift+F12 { spawn "wayvnc" "--output" "eDP-1" "--keyboard=se"; }
 
