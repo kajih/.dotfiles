@@ -56,10 +56,7 @@ fi
 [[ -d /opt/avr-gcc ]] && export PATH=/opt/avr-gcc/bin:$PATH
 
 # bun completions
-[[ -s "/home/kajih/.bun/_bun" ]] && source "/home/kajih/.bun/_bun"
-[[ -s "$NVM_DIR/bash_completion" ]] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+[[ -s "$HOME/.bun/_bun" ]] && source "$HOME/.bun/_bun"
+eval "$(~/.local/bin/mise activate zsh)"
 
 

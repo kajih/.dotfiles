@@ -87,13 +87,4 @@ fi
 [ -s "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
 [ -d "$HOME/.venv" ] && . "$HOME/.venv/bin/activate" 
 
-if [ -d "$HOME/.rvm" ] ; then 
-  export PATH="$PATH:$HOME/.rvm/bin"
-  . "$HOME/.rvm/scripts/rvm"
-fi
-
-if [ -d "$HOME/.nvm" ] ; then
-  export NVM_DIR="$HOME/.nvm"
-  . $NVM_DIR/nvm.sh  # This loads nvm
-fi
 

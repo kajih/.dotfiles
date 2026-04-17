@@ -15,6 +15,9 @@ mkdir -p ~/bin
 # -PROFILE
 [[ -f ~/.profile ]] && rm ~/.profile
 
+# -FISH (only if it's a real file, not already a symlink from a previous stow)
+[[ -f ~/.config/fish/config.fish && ! -L ~/.config/fish/config.fish ]] && rm ~/.config/fish/config.fish
+
 if [[ -h ~/.config ]] ; then 
   echo ".config is symlinked... Exiting!"
   exit 0
