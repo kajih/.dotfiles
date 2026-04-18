@@ -297,7 +297,7 @@ winget_use_sudo = true
 [mise]
 # Upgrades to the latest version available, bumping the version in mise.toml
 # (default: false)
-# bump = false
+bump = true
 
 # Number of jobs to run in parallel
 # (default: 4)
