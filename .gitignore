@@ -5,4 +5,5 @@ config/.config/tmux/plugins/*
 !config/.config/tmux/plugins/tpm
 config/.config/vnc/*.log
 config/.config/vnc/passwd
+config/.config/niri/config.kdl.backup*
 
