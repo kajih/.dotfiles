@@ -43,6 +43,7 @@ set argtextobj
 set commentary
 set functiontextobj
 set highlightedyank
+set indentwise
 set multiple-cursors
 set peekaboo
 set quickscope
@@ -50,6 +51,12 @@ set sneak
 set surround
 set switch
 " set which-key
+
+" vim-indentwise: jump to next/previous line with equal indent
+" Langmap equ
+map öj <Plug>(IndentWiseNextEqualIndent)
+map ök <Plug>(IndentWisePreviousEqualIndent)
+
 " set the various handlers
 sethandler <C-a> a:vim
 sethandler <C-b> a:vim
