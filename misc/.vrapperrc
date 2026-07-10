@@ -1,0 +1,71 @@
+let mapleader = " "
+set autoindent
+set ignorecase
+set smartcase
+
+inoremap jj <ESC>
+
+noremap ö [
+noremap ä ]
+noremap Ö {
+noremap Ä }
+
+nmap s <Plug>(sneak_s)
+nmap S <Plug>(sneak_S)
+
+nmap ; <Plug>(sneak-next)
+nmap , <Plug>(sneak-prev)
+
+vmap s <Plug>(sneak_s)
+vmap Z <Plug>(sneak_S)
+
+vmap ; <Plug>(sneak-next)
+vmap , <Plug>(sneak-prev)
+
+nmap f <Plug>(sneak_f)
+nmap F <Plug>(sneak_F)
+nmap t <Plug>(sneak_t)
+nmap T <Plug>(sneak_T)
+
+vmap f <Plug>(sneak_f)
+vmap F <Plug>(sneak_F)
+vmap t <Plug>(sneak_t)
+vmap T <Plug>(sneak_T)
+
+omap z <Plug>(sneak_s)
+omap Z <Plug>(sneak_S)
+
+
+
+"   5   │ vim.g.mapleader = ' '
+"   6   │ vim.g.maplocalleader = ' '
+"   7   │
+"   8   │ -- Keymaps for better default experience
+"   9   │ -- See `:help vim.keymap.set()`
+"  10   │ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+"  11   │
+"  12   │ -- Remap for dealing with word wrap
+"  13   │ vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+"  14   │ vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+"  15   │
+"  16   │ vim.keymap.set('n', '<C-l>', ':noh<CR>', { silent = true })
+"  17   │ vim.keymap.set('i', 'jk', '<Esc>', { silent = true })
+"  18   │
+"  19   │ vim.keymap.set('', 'ö', '[', { remap = true })
+"  20   │ vim.keymap.set('', 'ä', ']', { remap = true })
+"  21   │ vim.keymap.set('', 'Ö', '{', { remap = true })
+"  22   │ vim.keymap.set('', 'Ä', '}', { remap = true })
+"  23   │
+"  24   │ vim.keymap.set('', 'gö', 'g[', { remap = true })
+"  25   │ vim.keymap.set('', 'gä', 'g]', { remap = true })
+"  26   │
+"  27   │ vim.keymap.set('n', 'J', 'mzJ`z')
+"  28   │ vim.keymap.set('n', '<C-d>', '<C-d>zz')
+"  29   │ vim.keymap.set('n', '<C-u>', '<C-u>zz')
+"  30   │ vim.keymap.set('n', 'n', 'nzzzv')
+"  31   │ vim.keymap.set('n', 'N', 'Nzzzv')
+"  32   │
+"  33   │ vim.keymap.set('v', '<M-j>', ":m '>+1<CR>gv=gv")
+"  34   │ vim.keymap.set('v', '<M-k>', ":m '<-2<CR>gv=gv")
+"  35   │ vim.keymap.set('n', '<M-j>', ':m +1<CR>==')
+"  36   │ vim.keymap.set('n', '<M-k>', ':m -2<CR>==')
