@@ -157,28 +157,33 @@ nnoremap <c-tab> gt
 " clear the search buffer when hitting return
 nnoremap <leader><cr> :nohlsearch<cr>
 
+
 " code Refactoring
 nmap <leader>L <Action>(ShowReformatFileDialog)
 nmap <leader>RN <Action>(Refactorings.QuickListPopupAction)
+xmap <leader>RN <Action>(Refactorings.QuickListPopupAction)
 nmap <leader>aa <Action>(GotoAction)
 nmap <leader>ga <Action>(Annotate)
 nmap <leader>oi <Action>(OptimizeImports)
 nmap <leader>rc <Action>(IntroduceConstant)
+xmap <leader>rc <Action>(IntroduceConstant)
 nmap <leader>ri <Action>(Inline)
 nmap <leader>rm <Action>(ExtractMethod)
+xmap <leader>rm <Action>(ExtractMethod)
 nmap <leader>rn <Action>(RenameElement)
 nmap <leader>rv <Action>(IntroduceVariable)
 nmap <leader>sw <Action>(SurroundWith)
+xmap <leader>sw <Action>(SurroundWith)
 
 " stuff
-nmap <leader>er <Action>(QuickJavaDoc)
 nmap <leader>ee <Action>(ShowErrorDescription)
+nmap <leader>er <Action>(QuickJavaDoc)
 nmap <leader>hh <Action>(QuickImplementations)
 nmap <leader>hj <Action>(ShowHoverInfo)
 
-nmap <leader>wt <Action>(ActivateTerminalToolWindow)
-nmap <leader>wp <Action>(ActivateProblemsViewToolWindow)
 nmap <leader>wg <Action>(ActivateVersionControlToolWindow)
+nmap <leader>wp <Action>(ActivateProblemsViewToolWindow)
+nmap <leader>wt <Action>(ActivateTerminalToolWindow)
 nmap <leader>ww <Action>(ToggleZenMode)
 
 " splits
@@ -187,16 +192,16 @@ nmap <leader>ws <Action>(SplitHorizontally)
 
 " breakpoints
 nmap <leader>ub <Action>(ToggleLineBreakpoint)
-nmap <leader>us <Action>(ViewBreakpoints)
 nmap <leader>ur <Action>(Debugger.RemoveAllBreakpoints)
+nmap <leader>us <Action>(ViewBreakpoints)
 
 " bookmarks
-nmap <leader>bs <Action>(ShowBookmarks)
-nmap <leader>bt <Action>(ActivateBookmarksToolWindow)
 nmap <leader>bb <Action>(ToggleBookmark)
 nmap <leader>be <Action>(EditBookmark)
-nmap <leader>bp <Action>(GotoPreviousBookmark)
 nmap <leader>bn <Action>(GotoNextBookmark)
+nmap <leader>bp <Action>(GotoPreviousBookmark)
+nmap <leader>bs <Action>(ShowBookmarks)
+nmap <leader>bt <Action>(ActivateBookmarksToolWindow)
 
 " Various functionality
 nmap <leader>hu <Action>(HighlightUsagesInFile)
