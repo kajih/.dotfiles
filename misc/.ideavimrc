@@ -21,6 +21,16 @@ onoremap ä }
 onoremap Ö [
 onoremap Ä ]
 
+" Ergonomic repeat for Swedish keyboard
+nnoremap å ;
+xnoremap å ;
+onoremap å ;
+
+nnoremap Å ,
+xnoremap Å ,
+onoremap Å ,
+
+
 " Basic stuff
 set ReplaceWithRegister
 set VimEverywhere
@@ -57,8 +67,14 @@ set peekaboo
 
 " vim-indentwise: jump to next/previous line with equal indent
 " Langmap equ
-map öj <Plug>(IndentWiseNextEqualIndent)
-map ök <Plug>(IndentWisePreviousEqualIndent)
+map gj <Plug>(IndentWiseNextEqualIndent)
+map gk <Plug>(IndentWisePreviousEqualIndent)
+
+" Djupare / grundare indentering
+nmap <leader>gj <Plug>(IndentWiseNextGreaterIndent)
+nmap <leader>gk <Plug>(IndentWisePreviousLesserIndent)
+xmap <leader>gj <Plug>(IndentWiseNextGreaterIndent)
+xmap <leader>gk <Plug>(IndentWisePreviousLesserIndent)
 
 " set the various handlers
 sethandler <C-a> a:vim
@@ -157,7 +173,6 @@ nnoremap <c-tab> gt
 " clear the search buffer when hitting return
 nnoremap <leader><cr> :nohlsearch<cr>
 
-
 " code Refactoring
 nmap <leader>L <Action>(ShowReformatFileDialog)
 nmap <leader>RN <Action>(Refactorings.QuickListPopupAction)
@@ -176,14 +191,14 @@ nmap <leader>sw <Action>(SurroundWith)
 xmap <leader>sw <Action>(SurroundWith)
 
 " stuff
-nmap <leader>ee <Action>(ShowErrorDescription)
 nmap <leader>er <Action>(QuickJavaDoc)
+nmap <leader>ee <Action>(ShowErrorDescription)
 nmap <leader>hh <Action>(QuickImplementations)
 nmap <leader>hj <Action>(ShowHoverInfo)
 
-nmap <leader>wg <Action>(ActivateVersionControlToolWindow)
-nmap <leader>wp <Action>(ActivateProblemsViewToolWindow)
 nmap <leader>wt <Action>(ActivateTerminalToolWindow)
+nmap <leader>wp <Action>(ActivateProblemsViewToolWindow)
+nmap <leader>wg <Action>(ActivateVersionControlToolWindow)
 nmap <leader>ww <Action>(ToggleZenMode)
 
 " splits
@@ -192,16 +207,16 @@ nmap <leader>ws <Action>(SplitHorizontally)
 
 " breakpoints
 nmap <leader>ub <Action>(ToggleLineBreakpoint)
-nmap <leader>ur <Action>(Debugger.RemoveAllBreakpoints)
 nmap <leader>us <Action>(ViewBreakpoints)
+nmap <leader>ur <Action>(Debugger.RemoveAllBreakpoints)
 
 " bookmarks
-nmap <leader>bb <Action>(ToggleBookmark)
-nmap <leader>be <Action>(EditBookmark)
-nmap <leader>bn <Action>(GotoNextBookmark)
-nmap <leader>bp <Action>(GotoPreviousBookmark)
 nmap <leader>bs <Action>(ShowBookmarks)
 nmap <leader>bt <Action>(ActivateBookmarksToolWindow)
+nmap <leader>bb <Action>(ToggleBookmark)
+nmap <leader>be <Action>(EditBookmark)
+nmap <leader>bp <Action>(GotoPreviousBookmark)
+nmap <leader>bn <Action>(GotoNextBookmark)
 
 " Various functionality
 nmap <leader>hu <Action>(HighlightUsagesInFile)
@@ -232,13 +247,13 @@ xmap <leader>j <Action>(MethodDown)
 xmap <leader>k <Action>(MethodUp)
 nmap <leader>J <Action>(JumpToLastChange)
 nmap <leader>K <Action>(JumpToNextChange)
+nmap <leader>vj <Action>(VcsShowPrevChangeMarker)
+nmap <leader>vk <Action>(VcsShowNextChangeMarker)
 
 nmap g[ <Action>(GotoPreviousError)
 nmap g] <Action>(GotoNextError)
 nmap gö <Action>(GotoPreviousError)
 nmap gä <Action>(GotoNextError)
-nmap gJ <Action>(VcsShowPrevChangeMarker)
-nmap gK <Action>(VcsShowNextChangeMarker)
 nmap gn <Action>(GotoNextElementUnderCaretUsage)
 nmap gN <Action>(GotoPrevElementUnderCaretUsage)
 
@@ -305,6 +320,7 @@ xmap <A-j> :action MoveLineDown<CR>
 xmap <A-k> :action MoveLineUp<CR>
 
 inoremap jk <ESC>
+xnoremap jk <ESC>
 
 " Ergonomic line navigation for Swedish keyboard
 nnoremap H ^
