@@ -22,14 +22,8 @@ onoremap Ö [
 onoremap Ä ]
 
 " Ergonomic repeat for Swedish keyboard
-nnoremap å ;
-xnoremap å ;
-onoremap å ;
-
-nnoremap Å ,
-xnoremap Å ,
-onoremap Å ,
-
+map å ;
+map Å ,
 
 " Basic stuff
 set ReplaceWithRegister
