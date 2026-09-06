@@ -314,7 +314,6 @@ xmap <A-j> :action MoveLineDown<CR>
 xmap <A-k> :action MoveLineUp<CR>
 
 inoremap jk <ESC>
-xnoremap jk <ESC>
 
 " Ergonomic line navigation for Swedish keyboard
 nnoremap H ^
