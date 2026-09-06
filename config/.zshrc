@@ -8,6 +8,7 @@ SAVEHIST=500000
 
 setopt autocd extendedglob notify
 bindkey -v
+bindkey -M viins '^[^?' backward-kill-word
 
 source "${HOME}/.zgen/zgen.zsh"
 
